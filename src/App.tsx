@@ -19,7 +19,7 @@ function App() {
   const fetchTemplates = async () => {
     setLoading(true); // Start loading indicator
     try {
-      const response = await fetch('http://localhost:5000/api/email-templates'); // Fetch templates from backend
+      const response = await fetch('https://emailbuilder-backend.onrender.com/api/email-templates'); // Fetch templates from backend
       if (!response.ok) {
         throw new Error('Failed to fetch templates');
       }
@@ -51,14 +51,14 @@ function App() {
   
       if (template._id) {
         // Update existing template
-        response = await fetch(`http://localhost:5000/api/email-templates/${template._id}`, {
+        response = await fetch(`https://emailbuilder-backend.onrender.com/api/email-templates/${template._id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(template),
         });
       } else {
         // Create new template
-        response = await fetch('http://localhost:5000/api/email-templates', {
+        response = await fetch('https://emailbuilder-backend.onrender.com/api/email-templates', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(template),
@@ -94,7 +94,7 @@ function App() {
 
   
     try {
-      const response = await fetch(`http://localhost:5000/api/email-templates/${id}`, {
+      const response = await fetch(`https://emailbuilder-backend.onrender.com/api/email-templates/${id}`, {
         method: 'DELETE',
       });
   

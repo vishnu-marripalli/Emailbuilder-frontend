@@ -72,11 +72,10 @@ function App() {
       const data = await response.json();
   
       if (template._id) {
-        // Update the template in the list
+        // Update the template in the
         setTemplates(templates.map((t) => (t._id === template._id ? data : t)));
         toast.success('Template updated successfully');
       } else {
-        // Add the new template to the list
         setTemplates([data, ...templates]);
         // toast.success('Template created successfully');
       }

@@ -31,6 +31,10 @@ export const HeroSection = () => (
           Design professional email templates with our intuitive drag-and-drop builder. 
           Perfect for marketing campaigns, newsletters, and announcements.
         </p>
+        <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+         Due to my time constraints, I have made this project in a very short time.
+         Due which I have not been able to add all the features.
+        </p>
         {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
             Start Building
